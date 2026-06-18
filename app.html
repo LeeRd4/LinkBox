@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>ᦠ Link Box</title>
+<meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="shell">
+
+        <!--SIDEBAR-->
+        <aside id="sidebar">
+            <h2 class="logo">ᦠ Projets</h2>
+
+            <!--LISTE DES PROJETS-->
+            <div id="project-list"></div>
+
+            <!--ACTIONS-->
+            <div class="sidebar-actions">
+                <button id="add-btn" class="admin-only">Add project</button>
+
+                <button id="logout-btn">Déconnexion</button>
+            </div>
+        </aside>
+
+        <!--CONTENU PRINCIPAL-->
+        <main id="main">
+
+            <!--TOPBAR-->
+            <header id="topbar">
+                <h3 id="project title">Aucun projet</h3>
+                <span id="role-label"></span>
+            </header>
+
+            <!--CONTENU-->
+            <section id="content">
+                <p id="empty">Sélectionne un projet</p>
+                <iframe id="viewer"></iframe>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

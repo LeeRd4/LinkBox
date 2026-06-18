@@ -1,0 +1,78 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --dark:#0f172a;
+  --primary:#4f46e5;
+  --secondary:#7c3aed;
+  --bg:#eef2ff;
+  --white:#ffffff;
+}
+
+body{
+  font-family:sans-serif;
+  background:var(--dark);
+  height:100vh;
+}
+
+/* ===== LOGIN ===== */
+.login-page{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.login-box{
+  background:#94ccfb;
+  padding:32px;
+  border-radius:14px;
+  width:360px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.login-box h2 {
+  font-family: SmallRoundhand, cursive;
+  font-variant: small-caps;
+  color: white;
+}
+
+.login-box input {
+  padding: 14px 16px;
+  font-size: 16px;
+  font-family: SmallRoundhand, cursive;
+  font-variant: small-caps;
+}
+
+.login-box button{
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600px;
+  justify-content: center;
+  padding:14px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* ===== APP ===== */
+#shell{display:flex;height:100%}
+
+#sidebar{
+  width:260px;
+  background:var(--dark);
+  color:white;
+  padding:15px;
+}
+
+.admin-only{display:none}
+
+.project{
+  padding:8px;
+  cursor:pointer;
+  border-radius:6px;
+}
+
+.project:hover{background:var(--primary)}
