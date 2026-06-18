@@ -6,14 +6,45 @@ document.getElementById("visitor-btn").addEventListener("click", () => {
   window.location.href = "app.html";
 });
 
-document.getElementById("admin-btn").addEventListener("click", () => {
-  const user = document.getElementById("login-input").value;
-  const pass = document.getElementById("password-input").value;
+document.addEventListener("DOMContentLoaded", () => {
 
-  if (user === DEFAULT_ADMIN_USER && pass === DEFAULT_ADMIN_PASS) {
-    localStorage.setItem("role", "admin");
-    window.location.href = "app.html";
-  } else {
-    alert("Identifiants incorrects");
+  // récupération des éléments
+  const loginBtn = document.getElementById("login-btn");
+  const passwordInput = document.getElementById("password");
+  const adminPanel = document.getElementById("admin-panel");
+
+  // sécurité si élément manquant
+  if (!loginBtn || !passwordInput) {
+    console.log("Erreur : éléments login introuvables");
+    return;
   }
+
+  // clic bouton login
+  loginBtn.addEventListener("click", () => {
+
+    const password = passwordInput.value;
+
+    if (password === "1234") {
+      console.log("ADMIN connecté");
+
+      if (adminPanel) {
+        adminPanel.classList.remove("hidden");
+      }
+
+    } else {
+      console.log("VISITEUR");
+
+      if (adminPanel) {
+        adminPanel.classList.add("hidden");
+      }
+    }
+  });
+
+  // ENTER pour valider
+  passwordInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      loginBtn.click();
+    }
+  });
+
 });
